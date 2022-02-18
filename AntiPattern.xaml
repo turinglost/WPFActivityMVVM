@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFActivityMVVM.AntiPattern"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFActivityMVVM"
+        mc:Ignorable="d"
+        Title="AntiPattern" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="3">
+            <Label FontSize="14" FontWeight="Bold">AntiPattern</Label>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="12">Last Activity:</Label>
+                <Label Name ="lblLastActivity" Width="150"></Label>
+                <Label FontSize="12">Activity Count:</Label>
+                <Label FontSize="12" Name="lblActivityCount"></Label>
+            </StackPanel>
+            <Label FontSize="14" FontWeight="Bold">Add an activity</Label>
+            <StackPanel Margin="0,25" Orientation="Horizontal">
+                <Label FontSize="12">Activity Type: </Label>
+                <ComboBox Width="170" Name="cmbActivityOptions"></ComboBox>
+                <Label FontSize="12">StartDate: </Label>
+                <DatePicker x:Name="dtActivity" />
+                <Label FontSize="12">Duration (min): </Label>
+                <TextBox Background="LightGray" Name="txtDuration" Width="200" IsEnabled="True" />
+            </StackPanel>
+            <Button Width="200" x:Name="btnAddActivity" Click="btnAddActivity_Click">Add Activity</Button>
+            <Label FontSize="14" FontWeight="Bold">Add an activity type</Label>
+            <StackPanel Margin="0,25" Orientation="Horizontal">
+                <Label FontSize="12">Activity Type:</Label>
+                <TextBox Background="LightGray" Name="txtNewActivityType" Width="200" IsEnabled="True" />
+                <Button Width="200" x:Name="btnAddActivityType" Click="btnAddActivityType_Click">Add Activity Type</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
